@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url(Open_Sans/OpenSans-Regular.ttf) format("ttf");
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 15px;
+    vertical-align: baseline
+}
+
+/*-------------------------*/
+h1 {
+    font-size: 260%;
+    color: white;
+
+    text-align: center;
+}
+
+h2{
+	font-size: 160% ;
+	color: #EEEEEE;
+
+	text-align: center;
+}
+
+h3 {
+    font-size: 130%;
+    color: #0074cc;
+}
+
+p {
+    color: #353535;
+}
+
+/*-------------------------*/
+body {
+    font-family: "OpenSans", Arial;
+
+    width: 90% ;
+    max-width: 1400px ;
+
+    margin: auto;
+}
+
+header 
+{
+    background-color: #0074cc;
+    padding: 3%;
+
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+article {
+
+    padding: 1.5% 0;
+
+}
+
+article div {
+    padding: 10px;
+    margin: 0;
+}
+
+nav 
+{
+	color: white;
+
+	padding-bottom: 0;
+	margin-bottom: 0;
+
+	padding-top: 10px ;
+	margin-top: 10px ;
+	border-top: 1px solid white ;
+}
+
+nav ul
+{
+	list-style-type: none ;
+	text-align: center;
+
+}
+
+nav li 
+{
+	display: inline-block;
+}
+
+nav li:not(:last-child):after
+{
+	content: ' - ' ;
+}
+
+nav a
+{
+	font-size: 110% ;
+	text-decoration: none ;
+}
+
+nav a, nav a:visited
+{
+	color: white;
+}
+
+nav a:hover
+{
+	color: #FFC840;
+}
+
+/*-------------------------*/
+input {
+    border: 1px solid #7f8082;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    padding: 5px;
+    color: #7f8082;
+}
+
+input[type="button"] {
+    background-color: white;
+    border: 1px solid #7f8082;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    color: #7f8082;
+    font-size: 100%;
+}
+
+input[type="button"]:hover, input[type="button"]
+{
+    color: white;
+    background-color: #7f8082;
+}
+
+input[type="button"].alert {
+    color: #E13C3F;
+    border-color: #E13C3F;
+}
+
+input[type="button"].alert:hover
+{
+    color: white;
+    background-color: #E13C3F;
+}
+
+/*-------------------------*/
+.right {
+    display: block;
+    float: right;
+}
+
+.centered {
+    display: block;
+    margin: auto;
+
+    text-align: center;
+}
+
+/*-------------------------*/
+/*-------------------------*/
+
+@media screen and (min-width: 800px) {
+	
+    header
+    {
+         padding-bottom: 40px ;
+    }
+
+	header div
+	{
+		float: left ;
+	}
+
+	h1, h2
+	{
+		text-align: left ;
+	}
+
+	nav
+	{
+		text-align: right ;
+
+		padding: 1.5% ;
+		margin: 0.75%;
+
+		border: none ;
+	}
+
+	nav ul
+	{
+		text-align: right ;
+	}
+
+}
