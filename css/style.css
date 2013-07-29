@@ -21,31 +21,42 @@ time, mark, audio, video {
     border: 0;
     font: inherit;
     font-size: 15px;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 /*-------------------------*/
-h1 {
+h1, .h1 
+{
     font-size: 260%;
     color: white;
 
     text-align: center;
 }
 
-h2{
+h2, .h2
+{
 	font-size: 160% ;
 	color: #EEEEEE;
 
 	text-align: center;
 }
 
-h3 {
+h3, .h3
+{
     font-size: 130%;
     color: #0074cc;
+
+    margin: 10px 0;
 }
 
-p {
+p 
+{
     color: #353535;
+}
+
+li
+{
+    margin-left: 1.5% ;
 }
 
 /*-------------------------*/
@@ -101,6 +112,7 @@ nav ul
 nav li 
 {
 	display: inline-block;
+    margin: 0;
 }
 
 nav li:not(:last-child):after
@@ -125,6 +137,24 @@ nav a:hover
 }
 
 /*-------------------------*/
+
+strong
+{
+    font-weight: bold ;
+}
+
+em
+{
+    font-style: italic;
+}
+
+.u
+{
+    text-decoration: underline ;
+}
+
+/*-------------------------*/
+
 input {
     border: 1px solid #7f8082;
     -moz-border-radius: 3px;
@@ -135,7 +165,8 @@ input {
     color: #7f8082;
 }
 
-input[type="button"] {
+input[type="button"], input[type="submit"]
+{
     background-color: white;
     border: 1px solid #7f8082;
 
@@ -147,21 +178,36 @@ input[type="button"] {
     font-size: 100%;
 }
 
-input[type="button"]:hover, input[type="button"]
+input[type="button"]:hover, input[type="submit"]:hover
 {
     color: white;
     background-color: #7f8082;
 }
 
-input[type="button"].alert {
+input[type="button"].alert, input[type="submit"].alert
+{
     color: #E13C3F;
     border-color: #E13C3F;
 }
 
-input[type="button"].alert:hover
+input[type="button"].alert:hover, input[type="submit"].alert:hover
 {
     color: white;
     background-color: #E13C3F;
+}
+
+input.h1, input.h2
+{
+    max-width: 90%;
+    border: none ;
+
+    color: #0074cc ;
+    text-align: left ;
+}
+
+textarea
+{
+    max-width: 90%;
 }
 
 /*-------------------------*/
