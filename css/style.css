@@ -19,15 +19,10 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-body, input 
-{
-    font-family: Arial;
-}
-
 /*-------------------------*/
 h1, .h1 
 {
-    font-size: 180%;
+    font-size: 260%;
     color: white;
 
     text-align: center;
@@ -35,7 +30,7 @@ h1, .h1
 
 h2, .h2
 {
-	font-size: 140% ;
+	font-size: 160% ;
 	color: #EEEEEE;
 
 	text-align: center;
@@ -66,6 +61,8 @@ li
 
 /*-------------------------*/
 body {
+    font-family: Arial;
+
     width: 90% ;
     max-width: 1400px ;
 
@@ -158,14 +155,7 @@ em
 
 /*-------------------------*/
 
-.button
-{
-    display: inline-block; 
-    text-decoration: none ;
-}
-
-input, .button
-{
+input {
     border: 1px solid #7f8082;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -175,7 +165,7 @@ input, .button
     color: #7f8082;
 }
 
-input[type="button"], input[type="submit"], .button
+input[type="button"], input[type="submit"]
 {
     background-color: white;
     border: 1px solid #7f8082;
@@ -184,7 +174,7 @@ input[type="button"], input[type="submit"], .button
     font-size: 100%;
 }
 
-input[type="button"]:hover, input[type="submit"]:hover, .button:hover
+input[type="button"]:hover, input[type="submit"]:hover
 {
     color: white;
     background-color: #7f8082;
@@ -252,8 +242,6 @@ textarea
     list-style-type: none ;
 }
 
-/*-------------------------*/
-
 #detailed div
 {
     border-top: 2px solid #AAA ;
@@ -301,16 +289,6 @@ textarea
 		text-align: left ;
 	}
 
-    h1, .h1 
-    {
-        font-size: 260%;
-    }
-
-    h2, .h2
-    {
-        font-size: 160% ;
-    }
-
 	nav
 	{
 		text-align: right ;
@@ -326,15 +304,17 @@ textarea
 		text-align: right ;
 	}
 
-    #detailed ul
-    {
+    #detailed ul/*, #detailed p*/
+    {/*
+        display: inline-block;
+        vertical-align: top;*/
         float: right ;
     }
 
     #detailed p
     {
         width: 60% ;
-        padding-right: 10% ;
+        padding-right: 20% ;
     }
 
     #detailed li
@@ -343,7 +323,7 @@ textarea
         padding-left: 5%;
     }
 
-    #detailed input, #detailed .button
+    #detailed input
     {
         clear: both;
     }

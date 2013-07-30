@@ -124,8 +124,7 @@
 					<div class="centered">
 						
 						<input type="submit" class="alert" value="Enregistrer les modifications"/>
-						<!-- <input type="button" value="Ne pas enregistrer les modifications"/> -->
-						<a href="./" class="button">Ne pas enregistrer les modifications</a>
+						<input type="button" value="Ne pas enregistrer les modifications"/>
 
 					</div>
 					
@@ -133,7 +132,7 @@
 			</article>
 		</section>
 
-		<script src="js/jquery.min.js"></script>
+		<script src="jquery.min.js"></script>
 		<script>
 
 			var h1 = $(".h1") ;
