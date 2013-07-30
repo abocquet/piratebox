@@ -247,28 +247,28 @@ textarea
     list-style-type: none ;
 }
 
-#active div
+#detailed div
 {
     border-top: 2px solid #AAA ;
     border-bottom: 2px solid #AAA ;
 }
 
-#active p, #active ul
+#detailed p, #detailed ul
 {
     margin-bottom: 10px ;
 }
 
-#active p
+#detailed p
 {
     text-align: justify; 
 }
 
-#active p .title
+#detailed p .title
 {
     font-size: 110% ;
 }
 
-#active li
+#detailed li
 {
     margin: 0 ;
     list-style-type: none;
@@ -309,26 +309,26 @@ textarea
 		text-align: right ;
 	}
 
-    #active ul/*, #active p*/
+    #detailed ul/*, #detailed p*/
     {/*
         display: inline-block;
         vertical-align: top;*/
         float: right ;
     }
 
-    #active p
+    #detailed p
     {
         width: 60% ;
         padding-right: 20% ;
     }
 
-    #active li
+    #detailed li
     {
         border-left: 2px solid #AAA ;
         padding-left: 5%;
     }
 
-    #active input
+    #detailed input
     {
         clear: both;
     }

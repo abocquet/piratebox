@@ -3,28 +3,54 @@ $(function() {
 	var toogleView = function()
 	{
 		var that = $(this) ;
+		var parent = that.parent();
 		var nom = that.text();
 
-		if(categories[nom] != true)
+		//Si la categorie n'a pas été chargée ou pas rafrachie depuis plus d'une heure, on la rafraichis
+		if(categories[nom] == undefined ||  new Date().getTime() - categories[nom] > 3600000) 
 		{
-			console.log(nom);
 			$.ajax({
 				type: "GET",
 				url: "stockage/" + nom + ".xml",
 				dataType: "xml",
 				success: function(xml) {
-			 
-					categories[nom] = true ;
+			 		
+			 		parent.find("dt").remove();
+					categories[nom] = new Date().getTime();
+
+					var fichiers = $("<ul>");
+					parent.append(
+						$("<dt>").append(
+							fichiers
+						).attr("id", "open")
+					);
 
 					$(xml).find("f").each(function(index){
 
-						console.log(this)
+						fichiers.append(
+							$("<li>").append(
+								$("<h4>").text(
+									$(this).attr("n")
+								)
+							)
+						);
 
 					});
 
 				}
 			});	
 		}
+
+		var open = $("#open");
+		
+		var dt = parent.find("dt");
+		if(dt.attr("id") != "open")
+		{
+			dt.attr("id","open").toggle();
+		}
+
+		open.removeAttr("id").hide();
+
 	}
 
 	var categories = {};
@@ -41,8 +67,8 @@ $(function() {
 	 
 			$(xml).find("categorie").each(function(index){
 
-				var nom =$(this).text() ;
-				categories[nom] = false ;
+				var nom = $(this).text() ;
+				// categories[nom] = new Date().getTime() ;
 
 				$(container).append($("<dl>").append($("<dd>").append($("<h4>").text(nom)).click(toogleView)));
 
