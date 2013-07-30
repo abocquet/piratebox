@@ -1,5 +1,21 @@
 $(function() {
 
+	var toogleInfos = function()
+	{
+		var that = $(this) ;
+		var parent = that.parent();
+
+		var detailed = $("#detailed");
+		
+		var details = parent.find("div");
+		if(details.attr("id") != "detailed")
+		{
+			details.attr("id","detailed").toggle();
+		}
+
+		detailed.removeAttr("id").hide();
+	}
+
 	var toogleView = function()
 	{
 		var that = $(this) ;
@@ -31,7 +47,19 @@ $(function() {
 							$("<li>").append(
 								$("<h4>").text(
 									$(this).attr("n")
-								)
+								).click(toogleInfos),
+
+								$("<div>").append(
+									$("<ul>").append(
+										$("<li>").text("Type : " + $(this).attr("t")),
+										$("<li>").text("Taille : " + $(this).attr("s") + " octets"),
+										$("<li>").text("Date de dépot : " + $(this).attr("d"))
+									),
+									$("<p>").append(
+										$("<span>").addClass("title").html("Description: <br/>"),
+										$(this).attr("c")
+									)
+								).hide()
 							)
 						);
 
@@ -68,8 +96,6 @@ $(function() {
 			$(xml).find("categorie").each(function(index){
 
 				var nom = $(this).text() ;
-				// categories[nom] = new Date().getTime() ;
-
 				$(container).append($("<dl>").append($("<dd>").append($("<h4>").text(nom)).click(toogleView)));
 
 			});
