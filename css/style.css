@@ -49,6 +49,11 @@ h3, .h3
     margin: 10px 0;
 }
 
+h4, .h4
+{
+    font-size: 100% ;
+}
+
 p 
 {
     color: #353535;
@@ -170,10 +175,6 @@ input[type="button"], input[type="submit"]
     background-color: white;
     border: 1px solid #7f8082;
 
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-
     color: #7f8082;
     font-size: 100%;
 }
@@ -224,6 +225,56 @@ textarea
 }
 
 /*-------------------------*/
+
+#file_list dl
+{
+    padding: 5px;
+}
+
+#file_list dd
+{
+    border-bottom: 2px solid #AAA ;
+    font-size: 120% ;
+}
+
+#file_list dt > ul > li
+{
+    border-left: 2px solid #AAA ;
+    padding: 7px 7px 0 7px;
+    margin-left: 1% ;
+
+    font-size: 110% ;
+    list-style-type: none ;
+}
+
+#active div
+{
+    border-top: 2px solid #AAA ;
+    border-bottom: 2px solid #AAA ;
+}
+
+#active p, #active ul
+{
+    margin-bottom: 10px ;
+}
+
+#active p
+{
+    text-align: justify; 
+}
+
+#active p .title
+{
+    font-size: 110% ;
+}
+
+#active li
+{
+    margin: 0 ;
+    list-style-type: none;
+}
+
+/*-------------------------*/
 /*-------------------------*/
 
 @media screen and (min-width: 800px) {
@@ -257,5 +308,29 @@ textarea
 	{
 		text-align: right ;
 	}
+
+    #active ul/*, #active p*/
+    {/*
+        display: inline-block;
+        vertical-align: top;*/
+        float: right ;
+    }
+
+    #active p
+    {
+        width: 60% ;
+        padding-right: 20% ;
+    }
+
+    #active li
+    {
+        border-left: 2px solid #AAA ;
+        padding-left: 5%;
+    }
+
+    #active input
+    {
+        clear: both;
+    }
 
 }
