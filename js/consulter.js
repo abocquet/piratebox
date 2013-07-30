@@ -58,7 +58,8 @@ $(function() {
 									$("<p>").append(
 										$("<span>").addClass("title").html("Description: <br/>"),
 										$(this).attr("c")
-									)
+									),
+									$("<a>").attr("href", "stockage/fichiers/" + $(this).attr("n") , "target", "_blanck").addClass("button").addClass("centered").text("Télécharger " + $(this).attr("t"))
 								).hide()
 							)
 						);
