@@ -19,7 +19,13 @@
 
 		<section><article class="centered">
 
-	
+	<?php 
+		if(isset($_GET['badwolf']))
+		{
+			echo "<p>Vous devez avoir la clé pour entrer. Piraate !</p>" ;
+		}
+	?>
+
 	<form action="admin.php" method="post">
 
 		<label for="password">Mot de passe : </label>

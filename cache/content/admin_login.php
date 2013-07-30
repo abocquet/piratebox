@@ -1,9 +1,9 @@
 <article class="centered">
 
 	<?php 
-		if(isset($_GET['message']))
+		if(isset($_GET['badwolf']))
 		{
-			echo "<p>" . $_GET['message'] . "</p>" ;
+			echo "<p>Vous devez avoir la clé pour entrer. Piraate !</p>" ;
 		}
 	?>
 

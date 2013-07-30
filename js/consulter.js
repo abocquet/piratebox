@@ -7,7 +7,7 @@ $(function() {
 
 		var detailed = $("#detailed");
 		
-		var details = parent.find("div");
+		var details = parent.children("div");
 		if(details.attr("id") != "detailed")
 		{
 			details.attr("id","detailed").toggle();
@@ -58,6 +58,9 @@ $(function() {
 									$("<p>").append(
 										$("<span>").addClass("title").html("Description: <br/>"),
 										$(this).attr("c")
+									),
+									$("<div>").addClass("centered").append(
+										$("<a>").attr("href", "stockage/fichiers/" + $(this).attr("n")).attr("target", "_blank").addClass("button").text("Télécharger " + $(this).attr("n"))
 									)
 								).hide()
 							)

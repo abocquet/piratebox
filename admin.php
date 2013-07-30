@@ -13,7 +13,7 @@
 	if((!isset($_POST['password']) || $_POST['password'] != $config["password"]) && $_SESSION['isAuth'] == false)
 	{
 
-		header("Location: admin_login.php?message=" . urlencode("Vous devez avoir la clé pour entrer. Piraate !"));
+		header("Location: admin_login.php?badwolf=1");
 	}
 	else
 	{
@@ -62,6 +62,7 @@
 				file_put_contents('_config.php', $parametres);
 
 				createCache();
+				$_SESSION["isAuth"] = false;
 				header("Location: index.html");
 				return 0 ;
 			}
@@ -124,7 +125,8 @@
 					<div class="centered">
 						
 						<input type="submit" class="alert" value="Enregistrer les modifications"/>
-						<input type="button" value="Ne pas enregistrer les modifications"/>
+						<!-- <input type="button" value="Ne pas enregistrer les modifications"/> -->
+						<a href="./" class="button">Ne pas enregistrer les modifications</a>
 
 					</div>
 					
@@ -132,7 +134,7 @@
 			</article>
 		</section>
 
-		<script src="jquery.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 		<script>
 
 			var h1 = $(".h1") ;

@@ -19,10 +19,15 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+body, input 
+{
+    font-family: Arial;
+}
+
 /*-------------------------*/
 h1, .h1 
 {
-    font-size: 260%;
+    font-size: 180%;
     color: white;
 
     text-align: center;
@@ -30,7 +35,7 @@ h1, .h1
 
 h2, .h2
 {
-	font-size: 160% ;
+	font-size: 140% ;
 	color: #EEEEEE;
 
 	text-align: center;
@@ -61,8 +66,6 @@ li
 
 /*-------------------------*/
 body {
-    font-family: Arial;
-
     width: 90% ;
     max-width: 1400px ;
 
@@ -155,7 +158,14 @@ em
 
 /*-------------------------*/
 
-input {
+.button
+{
+    display: inline-block; 
+    text-decoration: none ;
+}
+
+input, .button
+{
     border: 1px solid #7f8082;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -163,9 +173,11 @@ input {
 
     padding: 5px;
     color: #7f8082;
+
+    cursor: default;
 }
 
-input[type="button"], input[type="submit"]
+input[type="button"], input[type="submit"], .button
 {
     background-color: white;
     border: 1px solid #7f8082;
@@ -174,7 +186,7 @@ input[type="button"], input[type="submit"]
     font-size: 100%;
 }
 
-input[type="button"]:hover, input[type="submit"]:hover
+input[type="button"]:hover, input[type="submit"]:hover, .button:hover
 {
     color: white;
     background-color: #7f8082;
@@ -217,9 +229,15 @@ textarea
     margin: auto;
 
     text-align: center;
+    clear: both ;
 }
 
 /*-------------------------*/
+
+#file_list div
+{
+    padding: 0;
+}
 
 #file_list dl
 {
@@ -242,11 +260,7 @@ textarea
     list-style-type: none ;
 }
 
-#detailed div
-{
-    border-top: 2px solid #AAA ;
-    border-bottom: 2px solid #AAA ;
-}
+/*-------------------------*/
 
 #detailed p, #detailed ul
 {
@@ -289,6 +303,16 @@ textarea
 		text-align: left ;
 	}
 
+    h1, .h1 
+    {
+        font-size: 260%;
+    }
+
+    h2, .h2
+    {
+        font-size: 160% ;
+    }
+
 	nav
 	{
 		text-align: right ;
@@ -304,17 +328,15 @@ textarea
 		text-align: right ;
 	}
 
-    #detailed ul/*, #detailed p*/
-    {/*
-        display: inline-block;
-        vertical-align: top;*/
+    #detailed ul
+    {
         float: right ;
     }
 
     #detailed p
     {
         width: 60% ;
-        padding-right: 20% ;
+        padding-right: 10% ;
     }
 
     #detailed li
@@ -323,7 +345,7 @@ textarea
         padding-left: 5%;
     }
 
-    #detailed input
+    #detailed input, #detailed .button
     {
         clear: both;
     }

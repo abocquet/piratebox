@@ -29,7 +29,15 @@
 
 			include("cache/snippets/header.php");
 
-			include("cache/content/" . $contentList[$i]["path"] . ".php");
+			//Si la page doit être enregistrée en php, le contenu dynamique n'est pas mis en cache
+			if($contentList[$i]["extention"] == ".php")
+			{
+				echo file_get_contents("cache/content/" . $contentList[$i]["path"] . ".php");
+			}
+			else
+			{
+				include("cache/content/" . $contentList[$i]["path"] . ".php");
+			}
 
 			include("cache/snippets/ender.php");
 
