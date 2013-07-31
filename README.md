@@ -10,4 +10,13 @@ La pirateboC est un fork de la pirateboX.
 
 Pour ceux qui dormaient au fond, la piratebox, originalement crée par [David Darts] (http://daviddarts.com), est un système permettant de partager des fichiers grâce à un réseau WiFi local. Quand les utilisateurs joignent le réseau et qu'ils ouvrent leur navigateur il arrivent automatiquement sur la page d'accueil de la piratebox. Ils peuvent alors immédiatement commencer à chatter et à échanger des fichiers.
 
-La pirateboc 
+La pirateboc est une variante de la piratebox qui se veut plus simple, personnalisable et complète que la version d'origine.
+
+Mais comment ça marche alors ?
+---------------------------------------------
+
+La pirateboc dispose, et va disposer de fonctionnalités absentes de la piratebox d'origine, comme la catégorisation des fichiers, la possibilité de renommer simplement l'interface, modifier le texte d'accueil, remettre automatiquement l'heure du système (lorsqu'il n'est plus alimenté, le système repart au 1er janvier 1970, pas top donc)...
+
+Coté utilisateur, la pirateboc utilise les technologies standards du web (HTML5, CSS3...) afin d'être compatible avec un maximum  avec d'appareils, avec l'utilisation d'un design adaptatif. De plus elle utilise la bibliothèque jQuery, qui offre un très large support des navigateurs.
+
+Coté serveur, le système utilise temporairement le PHP, destiné à être remplacé rapidement par du python, déjà utilisé dans les piratebox car il est bien plus souple et adapté à la pirateboc. Quand au matériel, à l'image de la piratebox, on devrait utiliser des routeurs MR-3020 disposant d'[OpenWRT](https://openwrt.org)
