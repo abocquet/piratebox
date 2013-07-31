@@ -20,3 +20,16 @@ La pirateboc dispose, et va disposer de fonctionnalités absentes de la piratebo
 Coté utilisateur, la pirateboc utilise les technologies standards du web (HTML5, CSS3...) afin d'être compatible avec un maximum  avec d'appareils, avec l'utilisation d'un design adaptatif. De plus elle utilise la bibliothèque jQuery, qui offre un très large support des navigateurs.
 
 Coté serveur, le système utilise temporairement le PHP, destiné à être remplacé rapidement par du python, déjà utilisé dans les piratebox car il est bien plus souple et adapté à la pirateboc. Quand au matériel, à l'image de la piratebox, on devrait utiliser des routeurs MR-3020 disposant d'[OpenWRT](https://openwrt.org)
+
+Et concrètement comment sa se passe ?
+-------------------------------------------------------
+
+Pour l'instant, l'interface de la pirateboc est au stade de bêta. Il reste un grand nombre de fonctionnalités à rajouter parmi celles citées plus haut. De plus, il faudra trouver le moyen de faire tourner le tout sur les MR-3020.
+
+Comment aider ?
+-----------------------
+
+C'est très simple:
+* parlez du projet autours de vous
+* si vous savez faire un CGI avec du python et faire fonctionner un script python sur un serveur Apache, cela m'intéresse pour le développement
+* si vous avez des connaissances sur OpenWRT ou de bonnes idées, et que le projet vous plaît, contactez-moi
