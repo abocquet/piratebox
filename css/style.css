@@ -291,6 +291,39 @@ textarea
 
 /*-------------------------*/
 
+#deposer form
+{
+    margin: auto;
+}
+ 
+#deposer label
+{
+    display: block;
+}
+
+#deposer input, #deposer select
+{
+    min-width: 100px;
+    display: block;
+    float: right ;
+}
+
+#deposer input:first-of-type
+{
+    width: 80% ;
+    margin: auto ;
+    float: none ;
+}
+
+#deposer input:last-of-type
+{
+    width: auto;
+    margin: auto;
+    float: none ;
+}
+
+/*-------------------------*/
+
 /* styles for desktop */
 .tinynav { display: none; }
 
@@ -305,46 +338,6 @@ textarea
 
 @media screen and (min-width: 800px) {
 	
-    header
-    {
-         padding-bottom: 40px ;
-    }
-
-	header div
-	{
-		float: left ;
-	}
-
-	h1, h2
-	{
-		text-align: left ;
-	}
-
-    h1, .h1 
-    {
-        font-size: 260%;
-    }
-
-    h2, .h2
-    {
-        font-size: 160% ;
-    }
-
-	nav
-	{
-		text-align: right ;
-
-		padding: 1.5% ;
-		margin: 0.75%;
-
-		border: none ;
-	}
-
-	nav ul
-	{
-		text-align: right ;
-	}
-
     #detailed ul
     {
         float: right ;
@@ -367,4 +360,58 @@ textarea
         clear: both;
     }
 
+    #deposer 
+    {
+        width: 600px ;
+        margin: auto;
+    }
+
+    #deposer input:first-of-type
+    {
+        width: 98% ;
+    }
+
+}
+
+@media screen and (min-width: 950px) {
+    
+    header
+    {
+         padding-bottom: 40px ;
+    }
+
+    header div
+    {
+        float: left ;
+    }
+
+    h1, h2
+    {
+        text-align: left ;
+    }
+
+    h1, .h1 
+    {
+        font-size: 260%;
+    }
+
+    h2, .h2
+    {
+        font-size: 160% ;
+    }
+
+    nav
+    {
+        text-align: right ;
+
+        padding: 1.5% ;
+        margin: 0.75%;
+
+        border: none ;
+    }
+
+    nav ul
+    {
+        text-align: right ;
+    }
 }

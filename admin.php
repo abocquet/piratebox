@@ -1,8 +1,7 @@
 <?php
 	
 	require "_config.php" ;
-	require "_makeCache.php" ;
-	require "_bbCode.php" ;
+	
 	session_start();
 
 	if(!isset($_SESSION['isAuth']))
@@ -17,6 +16,9 @@
 	}
 	else
 	{
+		require "_makeCache.php" ;
+		require "_bbCode.php" ;
+
 		$_SESSION['isAuth'] = true ;	
 		if(isset($_POST["h1"]) && isset($_POST["h2"]) && isset($_POST["chPassword"]) && isset($_POST["confChPassword"]) && isset($_POST['welcome_text']))
 		{

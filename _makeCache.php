@@ -2,7 +2,7 @@
 
 	function createCache()
 	{
-		require("cache/content_list.php");
+		require("cache/cache_options.php");
 		require("_config.php");
 
 		//Création de la nav bar
@@ -44,7 +44,5 @@
 			file_put_contents($contentList[$i]["path"] . $contentList[$i]["extention"], ob_get_clean()) ;
 		}
 	}
-
-	createCache();
 
 ?>

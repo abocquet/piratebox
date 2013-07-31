@@ -55,8 +55,8 @@
 			.attr('selected', true);
 		}
 
-		// var parse = String(window.location).split('/');
-		// $select.find("option[value='"+parse[parse.length-1]+"']").attr('selected', true);
+		var parse = String(window.location).split('/');
+		$select.find("option[value='"+parse[parse.length-1]+"']").remove();
 
 		// Change window location
 		$select.change(function () {

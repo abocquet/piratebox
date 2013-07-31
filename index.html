@@ -9,7 +9,8 @@
 	<body>
 
 		<script src="js/jquery.min.js"></script>
-		<script src="js/tinynav.min.js"></script>
+		<!-- <script src="js/tinynav.min.js"></script> -->
+		<script src="js/tinynav.js"></script>
 
 		<header>
 			<div>

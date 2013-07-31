@@ -1,5 +1,4 @@
 <?php
-
 	$contentList = array(
 
 		array("path" => "index", "name" => "Accueil"),
