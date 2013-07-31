@@ -80,7 +80,10 @@ $(function() {
 			dt.attr("id","open").toggle();
 		}
 
-		open.removeAttr("id").hide();
+		open.removeAttr("id").hide();		
+
+		//Après avoir replié les catégories on repli les fichiers dont on avait le détail
+		$("#detailed").removeAttr("id").hide();
 
 	}
 

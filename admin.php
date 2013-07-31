@@ -136,7 +136,6 @@
 
 		<script src="js/jquery.min.js"></script>
 		<script>
-
 			var h1 = $(".h1") ;
 
 			h1.keyup(function(){

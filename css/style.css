@@ -242,12 +242,18 @@ textarea
 #file_list dl
 {
     padding: 5px;
+    font-size: 100%;
 }
 
 #file_list dd
 {
     border-bottom: 2px solid #AAA ;
-    font-size: 120% ;
+    font-size: 115% ;
+}
+
+#file_list h4
+{
+    font-size: 115%;
 }
 
 #file_list dt > ul > li
@@ -281,6 +287,17 @@ textarea
 {
     margin: 0 ;
     list-style-type: none;
+}
+
+/*-------------------------*/
+
+/* styles for desktop */
+.tinynav { display: none; }
+
+/* styles for mobile */
+@media screen and (max-width: 600px) {
+    .js .tinynav { display: block }
+    .js #nav { display: none }
 }
 
 /*-------------------------*/

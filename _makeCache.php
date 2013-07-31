@@ -6,7 +6,7 @@
 		require("_config.php");
 
 		//Création de la nav bar
-		$navbar = "<ul>" ;
+		$navbar = "<ul id='nav'>" ;
 
 		$c = count($contentList);
 		for($i = 0 ; $i < $c ; $i++) {

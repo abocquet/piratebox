@@ -8,6 +8,9 @@
 	</head>
 	<body>
 
+		<script src="js/jquery.min.js"></script>
+		<script src="js/tinynav.min.js"></script>
+
 		<header>
 			<div>
 				<h1><?php echo $config["h1"]; ?></h1>
