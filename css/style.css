@@ -346,7 +346,7 @@ textarea
 
 @media screen and (min-width: 800px) {
 	
-    #detailed ul
+    #detailed ul.not_alone
     {
         float: right ;
     }
@@ -357,7 +357,7 @@ textarea
         padding-right: 10% ;
     }
 
-    #detailed li
+    #detailed ul.not_alone li
     {
         border-left: 2px solid #AAA ;
         padding-left: 5%;

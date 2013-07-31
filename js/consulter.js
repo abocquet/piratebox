@@ -27,7 +27,7 @@ $(function() {
 		{
 			$.ajax({
 				type: "GET",
-				url: "bibliotheque/" + nom + ".xml",
+				url: "bibliotheque/" + nom + ".xml?t=" + new Date().getTime(),
 				dataType: "xml",
 				error: function(){ alert("Erreur, la catégorie " + nom + " ne peut être affichée"); },
 				success: function(xml) {
@@ -44,6 +44,26 @@ $(function() {
 
 					$(xml).find("f").each(function(index){
 
+						var $description,
+							$infos = $("<ul>").append(
+							$("<li>").text("Type : " + $(this).attr("t")),
+							$("<li>").text("Taille : " + $(this).attr("s") + " octets"),
+							$("<li>").text("Date de dépot : " + $(this).attr("d"))
+						);
+
+						if($(this).attr("c") != "")
+						{
+							$description = $("<p>").append(
+								$("<span>").addClass("title").html("Description: <br/>"),
+								$(this).attr("c")
+							)
+
+							$infos.addClass("not_alone");
+
+						}
+
+						
+
 						$fichiers.append(
 							$("<li>").append(
 								$("<h4>").text(
@@ -51,15 +71,8 @@ $(function() {
 								).click(toogleInfos),
 
 								$("<div>").append(
-									$("<ul>").append(
-										$("<li>").text("Type : " + $(this).attr("t")),
-										$("<li>").text("Taille : " + $(this).attr("s") + " octets"),
-										$("<li>").text("Date de dépot : " + $(this).attr("d"))
-									),
-									$("<p>").append(
-										$("<span>").addClass("title").html("Description: <br/>"),
-										$(this).attr("c")
-									),
+									$infos,
+									$description,
 									$("<div>").addClass("centered").append(
 										$("<a>").attr("href", "bibliotheque/fichiers/" + $(this).attr("n")).attr("target", "_blank").addClass("button").text("Télécharger " + $(this).attr("n"))
 									)
