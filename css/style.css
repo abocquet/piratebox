@@ -184,6 +184,8 @@ input[type="button"], input[type="submit"], .button
 
     color: #7f8082;
     font-size: 100%;
+
+    -webkit-appearance: none ;
 }
 
 input[type="button"]:hover, input[type="submit"]:hover, .button:hover
