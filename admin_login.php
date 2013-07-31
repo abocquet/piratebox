@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="pirate.appcache">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
@@ -15,7 +15,7 @@
 		<header>
 			<div>
 				<h1>CorsairesBoxes</h1>
-				<h2>La boite, à piraates !</h2>
+				<h2>La boîte, à piratchoum !</h2>
 			</div>
 
 			<nav><ul id='nav'><li><a href='index.html'>Accueil</a></li> <li><a href='deposer.html'>Déposer un fichier</a></li> <li><a href='consulter.html'>Consulter les fichiers</a></li> <li><a href='admin_login.php'>Administrer</a></li> </ul></nav>
