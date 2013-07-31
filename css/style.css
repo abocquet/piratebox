@@ -164,7 +164,7 @@ em
     text-decoration: none ;
 }
 
-input, .button
+input, textarea, .button
 {
     border: 1px solid #7f8082;
     -moz-border-radius: 3px;
@@ -172,7 +172,7 @@ input, .button
     border-radius: 3px;
 
     padding: 5px;
-    color: #7f8082;
+    color: #353535;
 
     cursor: default;
 }
@@ -215,6 +215,7 @@ input.h1, input.h2
 
 textarea
 {
+    width: 90% ;
     max-width: 90%;
 }
 
@@ -298,7 +299,7 @@ textarea
  
 #deposer label
 {
-    display: block;
+    /*display: block;*/
 }
 
 #deposer input, #deposer select
@@ -316,6 +317,13 @@ textarea
 }
 
 #deposer input:last-of-type
+{
+    width: auto;
+    margin: auto;
+    float: none ;
+}
+
+#deposer label
 {
     width: auto;
     margin: auto;
