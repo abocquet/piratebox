@@ -21,11 +21,57 @@
 			<nav><ul id='nav'><li><a href='index.html'>Accueil</a></li> <li><a href='deposer.html'>Déposer un fichier</a></li> <li><a href='consulter.html'>Consulter les fichiers</a></li> <li><a href='admin_login.php'>Administrer</a></li> </ul></nav>
 		</header>
 
-		<section><article>
+		<section>
+<article>
 	<p>
-		<h3>Bonjour les gens</h3><br />
+		<span class="h3">Bonjour les gens</span><br />
 Et les autres aussi ;)	</p>
-</article>		</section>
+</article>
+
+<article id='file_list'>
+	
+	<h3>Consulter les fichiers</h3>
+	<p>Pour afficher une catégorie cliquez sur son nom.</p>
+
+</article>
+<script src="js/consulter.js"></script><article>
+	<iframe id="uploadFrame" style='width: 0px ; height: 0px ; postion: absolute ; top: 0px ; left: 0px ; background-color: white ;'></iframe>
+
+	<h3>Déposer un fichier</h3>
+
+	<form id="deposer" target="uploadFrame" action="action.php" enctype="multipart/form-data" method="post">
+		<input type="file" name="file" value="Choisir un fichier">
+		<br>
+
+		<input type="text" name="nom" id="nom" />
+		<label for="nom">Nom du fichier :</label>
+		<br><br>
+		
+		
+		<select id="type" name="type">
+			<option value="0">Texte</option>
+			<option value="1">Vidéo</option>
+			<option value="2">Photo</option>
+			<option value="3">Musique</option>
+		</select>
+		<label for="type">Type du fichier :</label>
+		<br><br>
+
+		<select value="" id="categorie" name="categorie">
+		</select>
+		<label for="categorie">Catégorie :</label>
+
+		<br><br>
+		<label for="commentaire">Description du fichier :</label>
+		<textarea name="commentaire" id="commentaire" cols="30" rows="6"></textarea>
+
+		<br><br>
+		<input type="submit" value="Envoyer">
+	</form>
+
+</article>
+
+<script src="js/deposer.js"></script>		</section>
 
 	</body>
 </html>

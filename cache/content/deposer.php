@@ -1,6 +1,7 @@
 <article>
-
 	<iframe id="uploadFrame" style='width: 0px ; height: 0px ; postion: absolute ; top: 0px ; left: 0px ; background-color: white ;'></iframe>
+
+	<h3>Déposer un fichier</h3>
 
 	<form id="deposer" target="uploadFrame" action="action.php" enctype="multipart/form-data" method="post">
 		<input type="file" name="file" value="Choisir un fichier">

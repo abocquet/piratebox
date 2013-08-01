@@ -104,7 +104,7 @@ $(function() {
 	var categories = {};
 
 	var container = $("<ul>");
-	$("section").append($("<article id='file_list'>").append(container));
+	$("article#file_list").append(container);
 
 	$.ajax({
 

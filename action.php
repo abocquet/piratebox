@@ -45,6 +45,8 @@
 				        $nom .= $extention ;
 			        }
 			    }
+
+			    $filename = $nom ;
 			    
 				$cheminCategorie = 'bibliotheque/' . $categorie . '.xml' ;
 			

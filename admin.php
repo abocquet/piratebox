@@ -20,7 +20,7 @@
 		require "_bbCode.php" ;
 
 		$_SESSION['isAuth'] = true ;	
-		if(isset($_POST["h1"]) && isset($_POST["h2"]) && isset($_POST["chPassword"]) && isset($_POST["confChPassword"]) && isset($_POST['welcome_text']))
+		if(isset($_POST["h1"]) && isset($_POST["h2"]) && isset($_POST["chPassword"]) && isset($_POST["confChPassword"]) && isset($_POST['welcome_text']) )
 		{
 
 			$_SESSION["errors"] = array() ;
@@ -46,6 +46,10 @@
 				$config['h2'] = htmlspecialchars($_POST['h2']);
 				$config['password'] = htmlspecialchars($_POST['chPassword']);
 
+				$config['display_welcome_text'] = isset($_POST['display_welcome_text']);
+				$config['display_file_explorer'] = isset($_POST['display_file_explorer']);
+				$config['display_file_adder'] = isset($_POST['display_file_adder']);	
+
 				//puis on s'occupe du bbcode
 				$config['welcome_text'] = makeItHTML($_POST["welcome_text"]);
 
@@ -70,7 +74,7 @@
 			}
 
 		}
-
+		
 		//Sinon, on affiche le formulaire et tout le tremblement
 	?>
 
@@ -98,8 +102,21 @@
 					
 					<h3>Page d'accueil</h3>
 					
-					<textarea name="welcome_text" cols="50" rows="5"><?php echo makeItBB($config["welcome_text"]) ; ?></textarea>
-					<?php writeBBInstructions() ; ?>
+					<input type="checkbox" name="display_welcome_text" id="display_welcome_text" <?php if($config['display_welcome_text'] == true){ echo "checked='checked'"; } ?>>
+					<label for="display_welcome_text">Afficher un texte de bienvenue sur la page d'accueil</label>
+					
+					<div id="welcome_text">
+						<textarea name="welcome_text" cols="50" rows="5"><?php echo makeItBB($config["welcome_text"]) ; ?></textarea>
+						<?php writeBBInstructions() ; ?>
+					</div>
+
+					<br>
+					<input type="checkbox" name="display_file_explorer" id="display_file_explorer" <?php if($config['display_file_explorer'] == true){ echo "checked='checked'"; }?>>
+					<label for="display_file_explorer">Permettre de voir les fichiers sur la page d'accueil</label>
+					
+					<br>
+					<input type="checkbox" name="display_file_adder" id="display_file_adder" <?php if($config['display_file_adder'] == true){ echo "checked='checked'"; }?>>
+					<label for="display_file_adder">Permettre de déposer des fichiers sur la page d'accueil</label>
 
 					<hr/>
 
@@ -149,6 +166,19 @@
 			h2.keyup(function(){
 				$("#h2").val(h2.val());
 			})
+
+			$("#display_welcome_text").change(function(){
+				if($(this).is(':checked'))
+				{
+					$("#welcome_text").show();
+				}
+				else
+				{
+					$("#welcome_text").hide();
+				}
+			}).trigger("change");
+
+
 
 		</script>
 	

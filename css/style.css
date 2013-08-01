@@ -237,6 +237,11 @@ textarea
 
 /*-------------------------*/
 
+#file_list h3 
+{
+    margin: 0;
+}
+
 #file_list div
 {
     padding: 0;
@@ -246,6 +251,7 @@ textarea
 {
     padding: 5px;
     font-size: 100%;
+    margin-top: 10px ;
 }
 
 #file_list dd
