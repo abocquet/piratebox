@@ -35,5 +35,4 @@ Comment aider ?
 
 C'est très simple:
 * parlez du projet autours de vous
-* si vous savez faire un CGI avec du python et faire fonctionner un script python sur un serveur Apache, cela m'intéresse pour le développement
 * si vous avez des connaissances sur OpenWRT ou de bonnes idées, et que le projet vous plaît, contactez-moi
