@@ -56,6 +56,7 @@
 		}
 
 		var parse = String(window.location).split('/');
+if(parse==""){parse="index.html"}
 		$select.find("option[value='"+parse[parse.length-1]+"']").remove();
 
 		// Change window location
